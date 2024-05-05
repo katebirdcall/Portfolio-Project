@@ -26,6 +26,10 @@ I used a Gradient Boosting Regressor
 
 ## Performance
 
+|           Model       |      mse      |     rmse     |     mae      |     r2       |
+|----------------------|---------------|--------------|--------------|--------------|
+|           GBR        |   13.245066   |   3.639377   |   3.064864   |   0.047022   |
+
 Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. 
 
 ## Limitations
