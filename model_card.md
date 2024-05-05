@@ -21,16 +21,22 @@
 - result - a horse's finishing position in a given race
 
 **Model Architecture:** 
-I used a Gradient Boosting Regressor
+
+I used a Gradient Boosting Regressor, with tuned hyperparameters:
+- n_estimators: The number of trees in the forest
+- learning_rate: The step-size shrinkage
+- max_depth: Controls the tree depth
+- min_samples_split: The minimum number of samples required to split an internal node
 
 
 ## Performance
+
+I used Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE) and R-Squared (R2) metrics to measure the performance of my model, with the below final results.
 
 |           Model       |      mse      |     rmse     |     mae      |     r2       |
 |----------------------|---------------|--------------|--------------|--------------|
 |           GBR        |   13.245066   |   3.639377   |   3.064864   |   0.047022   |
 
-Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. 
 
 ## Limitations
 
@@ -38,8 +44,6 @@ My dataset only contains horse races (and the results thereof) for races that to
 
 ## Trade-offs
 
-The hyperparamter tuning of my model take a long time to run, as does the general fitting. This means it wouldn't be great if we needed to update, say, bettings odds on the fly during a race due to updated data. A repercussion of this is also that if we were to expand the dataset to be more diverse, the computation time would be even higher.
+The hyperparamter tuning of my model took a long time to run, as did the general fitting. This means it wouldn't be great if we needed to update, say, betting odds on the fly during a race due to updated data. A repercussion of this is also that if we were to expand the dataset to be more diverse, the computation time would be even higher.
 
-Whilst the Mean Absolute Error suggest accuracy within 3 places, the r-squared value is low, suggesting 
-
-Outline any trade-offs of your model, such as any circumstances where the model exhibits performance issues. 
+Whilst the Mean Absolute Error suggests accuracy within 3 places, the r-squared value is low, suggesting poor fit overall.
